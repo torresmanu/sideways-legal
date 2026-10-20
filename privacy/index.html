@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Sideways Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for Sideways and Moving — for Jira.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="../">Sideways</a>
+      <nav class="nav" aria-label="Legal">
+        <a href="./" aria-current="page">Privacy Policy</a>
+        <a href="../terms/">Terms of Service</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Sideways Privacy Policy</h1>
+      <p class="meta">Last updated: 20 October 2026</p>
+      <p>This policy describes how Sideways handles information in connection with its products and this website. It is written for customers, Jira administrators, users of Moving — for Jira, and people who contact Sideways.</p>
+
+      <h2>Who Sideways is</h2>
+      <p>Sideways is an independent software vendor. Sideways publishes software for Atlassian products. The current product is Moving — for Jira.</p>
+      <p>Sideways is not Atlassian. Atlassian provides Jira, Atlassian Forge, and the Atlassian Marketplace. Atlassian’s handling of account, billing, and Jira data is described in Atlassian’s own policies and agreements with the customer.</p>
+
+      <h2>Products covered by this policy</h2>
+      <p>This policy currently covers:</p>
+      <ul>
+        <li>Moving — for Jira, an Atlassian Forge app.</li>
+        <li>This Sideways website, which publishes Sideways legal documents.</li>
+      </ul>
+      <p>If Sideways later offers another product, this policy will be updated to describe that product before it relies on different data practices.</p>
+
+      <h2>Moving — for Jira</h2>
+      <p>Moving — for Jira is an Atlassian Forge app. It runs on Atlassian infrastructure and uses native Forge and Jira APIs. It helps the person viewing it understand how active issues are moving through workflow.</p>
+      <p>Jira requests are made on behalf of the user who is viewing the app. Moving can read only Jira work data that user is already allowed to read. The app is currently granted the Jira scope <code>read:jira-work</code>.</p>
+
+      <h2>What information Moving accesses</h2>
+      <p>Moving reads Jira work data needed to analyze active issues and workflow history. In the current version, that includes:</p>
+      <ul>
+        <li>Issue identifiers and keys</li>
+        <li>Summaries</li>
+        <li>Status</li>
+        <li>Project</li>
+        <li>Created and updated timestamps</li>
+        <li>Assignee name and Atlassian account identifier, when an issue has an assignee</li>
+        <li>The Jira status catalogue</li>
+        <li>Status-change history used to understand workflow movement</li>
+      </ul>
+      <p>To compare current time in status with recent workflow, Moving also reads identifiers, project, creation time, and status history for a limited set of completed issues in the same projects.</p>
+      <p>Jira issue data may contain personal information. Summaries and other issue fields can include names, assignee information, issue content, and activity information. Sideways does not claim that Moving processes no personal data.</p>
+      <p>The current scope does not let Moving edit Jira issues. Moving does not request scopes for a Sideways-operated backend, because it does not have one.</p>
+
+      <h2>How information is used</h2>
+      <p>Moving uses the Jira data it reads to compute and display its analysis while the app is running. That analysis is calculated during app execution and shown in the Forge interface.</p>
+      <p>Sideways does not use Jira data for advertising. Sideways does not sell customer data. Sideways does not use Jira data to train AI models. Moving does not currently use third-party AI services. Sideways does not send Jira issue data to an external backend.</p>
+
+      <h2>Data storage</h2>
+      <p>Moving does not have its own database. It does not use Forge persistent storage, including Forge SQL, Forge key-value storage, Forge custom entities, or app-managed entity properties, to store Jira data.</p>
+      <p>Moving does not intentionally persist Jira issue content outside Atlassian infrastructure. Issue data is processed on Atlassian infrastructure for the app request, and the result is shown in Jira. The customer’s Jira site remains the system of record for issues.</p>
+      <p>The app may write operational log messages, such as error text and aggregate counts, to the Forge logging service. Those logs remain on Atlassian infrastructure. Sideways does not use them to assemble a separate copy of customer issue content.</p>
+
+      <h2>Data sharing</h2>
+      <p>Sideways does not sell customer data and does not share Jira issue data with advertisers or data brokers. Sideways does not send Jira issue data to a backend operated by Sideways.</p>
+      <p>Jira data accessed by Moving is processed through Atlassian Forge and Jira APIs on Atlassian infrastructure. Atlassian processes that data under its relationship with the customer.</p>
+      <p>If you contact Sideways for support, Sideways receives the contact details and any other information you choose to provide, such as your name, email address, and the contents of your message. Sideways uses that information to respond and to keep a record of the exchange. Sideways does not sell it.</p>
+
+      <h2>External services</h2>
+      <p>Moving depends on Atlassian Forge and Jira. It does not use external analytics, advertising trackers, or a third-party analytics service. It does not currently use third-party AI services.</p>
+      <p>This website is static HTML hosted on GitHub Pages. Sideways does not set cookies on it and does not add analytics, advertising, or tracking scripts. GitHub, as the host, may process connection data under GitHub’s own policies. Sideways does not control that hosting infrastructure.</p>
+
+      <h2>Atlassian Forge</h2>
+      <p>Moving is built and runs as an Atlassian Forge app. Forge executes the app on Atlassian infrastructure. Sideways does not host a separate application server for Moving, and the app is not configured to call out to a Sideways service.</p>
+      <p>The app’s Jira access is limited to the scopes installed with it. The scope currently used to read Jira work data is <code>read:jira-work</code>.</p>
+
+      <h2>Security</h2>
+      <p>Sideways relies on Atlassian Forge and on Jira’s permission checks. Because Jira requests run as the current user, Jira applies that user’s existing access.</p>
+      <p>No method of transmission or processing is perfectly secure. This policy does not claim a security certification, and Sideways does not guarantee that unauthorized access cannot occur.</p>
+
+      <h2>Data retention</h2>
+      <p>Moving does not keep a Sideways store of Jira issue content. When an app request finishes, Moving does not write that content to a database of its own. Issue data that remains in Jira stays under the customer’s and Atlassian’s control. Operational logs on Atlassian infrastructure are retained according to Atlassian’s practices.</p>
+      <p>If you contact Sideways, Sideways keeps that correspondence for as long as it is reasonably needed to handle the request and to keep a record of it, and deletes it when it is no longer needed.</p>
+
+      <h2>Your rights</h2>
+      <p>Depending on where you live, you may have rights to access, correct, or delete personal information, or to object to or restrict certain uses. This policy does not limit rights that applicable law does not allow to be waived.</p>
+      <p>Jira work data is stored in the customer’s Jira site. Requests about that data should be made to the customer’s organization or through Jira. Moving does not keep a separate copy of issue content, and it cannot delete issues from a customer’s Jira site.</p>
+      <p>Requests about information you sent directly to Sideways, including support email, can be sent to the contact address below. Sideways will respond within a reasonable time.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>Sideways may update this policy by publishing a new version on this page and changing the “Last updated” date. The version on this page is the current policy.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this policy can be sent to Sideways.</p>
+      <p>Email: <a href="mailto:torres.schulten@gmail.com">torres.schulten@gmail.com</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <p>Sideways · Moving — for Jira</p>
+      <p><a href="../terms/">Terms of Service</a></p>
+    </footer>
+  </div>
+</body>
+</html>
