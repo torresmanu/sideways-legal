@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Sideways Data Processing Agreement</title>
+  <meta name="description" content="Data Processing Agreement for Moving — for Jira, published by Sideways.">
+  <link rel="icon" href="../favicon.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="../">Sideways</a>
+      <nav class="nav" aria-label="Site">
+        <a href="../moving/">Moving</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Service</a>
+        <a href="./" aria-current="page">Data Processing Agreement</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Sideways Data Processing Agreement</h1>
+      <p class="meta">Last updated: 21 October 2026</p>
+      <p>This Data Processing Agreement describes how Sideways processes personal data in a customer’s Jira data when providing Moving — for Jira. The <a href="../moving/">product documentation</a> also calls this app Moving — Workflow Insights for Jira. It is the same product.</p>
+      <p>This agreement supplements the <a href="../terms/">Sideways Terms of Service</a>. It applies to that processing. The Terms still cover the other subjects they address. If this agreement and the Terms conflict about the processing of that personal data, this agreement controls.</p>
+
+      <h2>Introduction and scope</h2>
+      <p>This agreement applies when a customer installs or uses Moving and Moving processes personal data in that customer’s Jira data on the customer’s behalf.</p>
+      <p>It does not govern the customer’s own use of Jira. That relationship is between the customer and Atlassian. It also does not turn this public website into a processing service for Jira data. Support messages a person chooses to send Sideways are described in the <a href="../privacy/">Privacy Policy</a>, and they are not processed by the Forge app.</p>
+      <p>By installing, accessing, or using Moving under the Terms, the customer agrees to this agreement. A separate signature is not required. If you accept for an organization, you confirm that you have authority to bind it.</p>
+      <p>Sideways is an independent software vendor. Sideways is not Atlassian, and Atlassian is not a party to this agreement.</p>
+
+      <h2>Roles of the parties</h2>
+      <p>For personal data in customer Jira data that Moving processes to provide the app, the customer is the data controller and Sideways is the data processor.</p>
+      <p>The customer, through its use of Jira, decides what is stored there. Sideways does not decide that purpose. Sideways processes the data only to provide Moving. Sideways is not the controller of that customer Jira data.</p>
+      <p>Jira issue content and assignee fields can contain personal data. This agreement does not say that Moving processes no personal data.</p>
+
+      <h2>Details of processing</h2>
+      <p>The subject matter is Moving — for Jira, a Jira Cloud app that runs on Atlassian Forge. It classifies active work as Moving, Slowing, or Waiting.</p>
+      <p>The nature of the processing is to read the Jira work data the current user can already read, calculate the workflow insight during that app execution, and show the result in Jira. The purpose is to help the customer see active work that may need attention.</p>
+      <p>That is processing at runtime. Sideways does not currently operate an external database or an external backend that persists the customer’s Jira data. Processing for a request ends when that execution finishes. Sideways continues to process data only while the customer has Moving installed and a user runs it, until the customer uninstalls it or Sideways stops providing it. Sideways does not set a separate retention period for Jira issue content, because it does not keep its own store of that content.</p>
+      <p>As needed to provide Moving, the app may process:</p>
+      <ul>
+        <li>Jira issue content and metadata, including issue identifiers, keys, summaries, project, and created and updated timestamps;</li>
+        <li>workflow status, the Jira status catalogue, and status-change history, including history from a limited set of completed issues in the same projects; and</li>
+        <li>assignee name and Atlassian account identifier, when an issue has an assignee.</li>
+      </ul>
+      <p>Issue content may also include other personal data the customer has written into Jira.</p>
+      <p>The data subjects are people identified on the issues Moving reads, such as assignees, and other people whose personal data the customer has included in those issues.</p>
+      <p>Moving is granted the Jira scope <code>read:jira-work</code>. Jira requests run on behalf of the user who is viewing the app, so Jira applies that user’s existing access. Moving does not request write access. It does not modify issues, transition issues, or add comments.</p>
+      <p>The app may write operational log messages, such as error text and aggregate counts, to the Forge logging service. Those logs remain on Atlassian infrastructure. Sideways does not use them to assemble a separate copy of customer issue content. Atlassian retains them according to Atlassian’s practices.</p>
+
+      <h2>Processor obligations</h2>
+      <p>Sideways will process that personal data only to provide Moving, as described in this agreement, the Terms, and the product documentation, and on other documented customer instructions that Sideways can carry out without changing how the app is built.</p>
+      <p>If Sideways becomes aware that an instruction appears to violate applicable data-protection law, Sideways will tell the customer and will not follow that instruction until the customer confirms or withdraws it.</p>
+      <p>Sideways will not follow an instruction that the current app cannot perform, such as storing a copy of Jira issues outside Atlassian or editing issues, unless the product and this agreement are updated first.</p>
+      <p>Sideways will keep the data confidential, apply the security measures below, meet the subprocessor, assistance, breach, deletion, and information duties in this agreement, and will not use customer Jira personal data for advertising, for sale, or to train AI models.</p>
+
+      <h2>Confidentiality</h2>
+      <p>Sideways will not disclose personal data processed under this agreement except to provide Moving, as this agreement allows, or when the law requires disclosure.</p>
+      <p>Sideways will not use that data for a different purpose. A person acting for Sideways who can access it must be required to keep it confidential.</p>
+
+      <h2>Security measures</h2>
+      <p>Sideways protects the processing through the design of Moving:</p>
+      <ul>
+        <li>Moving runs on Atlassian Forge, on Atlassian infrastructure.</li>
+        <li>The app requests only <code>read:jira-work</code>.</li>
+        <li>Jira requests run as the current user, so Jira enforces that user’s permissions.</li>
+        <li>Moving does not write to Jira.</li>
+        <li>Sideways does not operate an external backend or database for customer Jira data, and the app is not configured to send that data to an external service.</li>
+        <li>Moving does not use external analytics, advertising trackers, or third-party AI services.</li>
+        <li>Moving does not use Forge persistent storage for Jira issue content.</li>
+      </ul>
+      <p>Sideways does not hold a security certification, and this agreement does not claim one. Sideways does not control Atlassian’s physical security, hosting locations, or encryption. No method of processing is perfectly secure, and this agreement does not guarantee that unauthorized access cannot occur.</p>
+
+      <h2>Subprocessors</h2>
+      <p>Moving processes customer Jira data on Atlassian Forge. Atlassian provides that platform. Sideways does not operate a separate host for the app.</p>
+      <p>For this processing, Atlassian is the infrastructure provider on which Forge runs Moving and through which the app reads Jira. Sideways does not control Atlassian’s own providers, data-center locations, or certifications. The customer’s separate agreement with Atlassian governs the customer’s use of Jira.</p>
+      <p>Atlassian describes its own practices in its <a href="https://www.atlassian.com/legal/privacy-policy">Privacy Policy</a>, <a href="https://www.atlassian.com/trust">Trust Center</a>, and <a href="https://www.atlassian.com/legal/data-processing-addendum">Data Processing Addendum</a>.</p>
+      <p>Sideways does not currently use another subprocessor for customer Jira personal data. It does not use an external database host, analytics vendor, advertising network, or AI provider for this processing. Where Marketplace billing applies, Atlassian handles payment under the Terms. Sideways does not send Jira issue content to a payment provider.</p>
+      <p>This website is static HTML on GitHub Pages. Moving does not send customer Jira data to it.</p>
+      <p>If Sideways later engages a subprocessor that would process customer Jira personal data, Sideways will update this page, and change the date above, before that processing begins. The customer may stop using Moving, and uninstall it, if the customer objects. Continued use after the update is posted accepts the change, on the same basis as updates to the Terms.</p>
+
+      <h2>International data transfers</h2>
+      <p>Sideways does not transfer customer Jira personal data to a system Sideways operates. The app has no external backend.</p>
+      <p>Where Forge and Jira process the data is determined by Atlassian and by the customer’s Jira site. Sideways does not control that location and does not promise a hosting region or a data-residency outcome.</p>
+      <p>Sideways has not put Standard Contractual Clauses, or another named transfer tool, in place with the customer as part of this agreement. Where a transfer restriction applies to data hosted in Jira or on Forge, the customer’s agreement with Atlassian is the mechanism that covers that infrastructure. This agreement does not add a separate transfer warranty.</p>
+      <p>A customer who needs a specific transfer arrangement can contact Sideways at the address below.</p>
+
+      <h2>Assistance with data subject rights</h2>
+      <p>People may have rights to access, correct, delete, or restrict personal data, or to object, where applicable law gives those rights. This agreement does not limit a right the law does not allow to be waived.</p>
+      <p>Jira is the system of record for the customer’s issues. Moving does not keep a separate copy of issue content, and it cannot delete or correct issues in the customer’s Jira site. The customer handles those requests in Jira.</p>
+      <p>If Sideways receives a request about a customer’s Jira data and can tell which customer it concerns, Sideways will direct the requester to that customer. Sideways will not answer the request on the merits except as the customer instructs or the law requires.</p>
+      <p>Sideways will help the customer with information Sideways actually has about how Moving processes data. That help is limited because Sideways does not hold a separate store of the issues. Sideways will also provide information it actually has if the customer needs it for a legally required impact assessment of this processing.</p>
+
+      <h2>Personal data breach notification</h2>
+      <p>Sideways will notify the customer without undue delay after becoming aware of a personal data breach affecting personal data processed under this agreement.</p>
+      <p>The notice will include the information Sideways reasonably has at the time. Sideways may send more information later. Sideways will not withhold the first notice only because some details are still unknown.</p>
+      <p>Sideways does not monitor Atlassian’s infrastructure and cannot notify the customer of an incident known only to Atlassian. Notices that Atlassian owes under the customer’s Atlassian agreement stay with Atlassian.</p>
+      <p>Where the law requires a notice to a regulator or to affected people, that duty remains with the controller, unless the law places it on Sideways directly.</p>
+
+      <h2>Deletion or return of data</h2>
+      <p>When the customer uninstalls Moving, or Sideways stops providing it, Sideways stops further processing of that customer’s Jira data through the app.</p>
+      <p>Sideways has no separate copy of Jira issue content to return or delete. Issue data that remains in Jira stays with the customer and Atlassian. Forge logs remain subject to Atlassian’s retention. Sideways does not keep those logs as a copy of the customer’s issues.</p>
+      <p>Personal data a person sends directly to Sideways, such as a support email, is kept as the Privacy Policy describes. The customer can ask Sideways to delete that correspondence. It is not a copy of the Jira site.</p>
+
+      <h2>Audits and compliance information</h2>
+      <p>Sideways will make available the information reasonably necessary to show compliance with this agreement. That information includes this page, the Privacy Policy, and a description of how Moving processes data.</p>
+      <p>Sideways does not host the customer’s Jira data, so an audit of Sideways will not produce a database of the customer’s issues.</p>
+      <p>Sideways will contribute to a customer audit that is reasonable, concerns Sideways’ own handling under this agreement, and does not attempt to audit Atlassian systems Sideways does not control. The customer can review Atlassian’s trust materials for that infrastructure. This agreement does not give a right to audit Atlassian.</p>
+
+      <h2>Changes to subprocessors or this agreement</h2>
+      <p>Sideways may update this agreement by publishing a new version on this page and changing the “Last updated” date. If the customer keeps using Moving after that update, the customer accepts the updated agreement. If the customer does not agree, the customer should stop using Moving and uninstall it.</p>
+      <p>Sideways will publish a change that would send customer Jira personal data to a new external subprocessor before that processing starts.</p>
+
+      <h2>Relationship with the Terms</h2>
+      <p>This agreement is part of the contract formed by the Terms when the customer uses Moving. Acceptance of the Terms is acceptance of this agreement for the processing it covers. No separate signature workflow is used.</p>
+      <p>The Terms still cover use of Moving, Atlassian dependency, fees, warranties, liability, termination, and the other subjects written there. On the processing of personal data in customer Jira data, this agreement controls if the two documents conflict.</p>
+      <p>Neither document selects a court or a governing law. Data-protection law that applies, including the GDPR where it applies, still applies.</p>
+      <p>The Privacy Policy explains the same Moving architecture for a general reader. This agreement is the controller-to-processor contract. They are intended to match. A customer who thinks they do not can write to the address below.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this agreement can be sent to Sideways.</p>
+      <p>Email: <a href="mailto:torres.schulten@gmail.com">torres.schulten@gmail.com</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <p>Sideways · Moving — for Jira</p>
+      <p><a href="../privacy/">Privacy Policy</a></p>
+      <p><a href="../terms/">Terms of Service</a></p>
+    </footer>
+  </div>
+</body>
+</html>

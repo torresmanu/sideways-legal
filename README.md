@@ -8,3 +8,4 @@ This repository is a static site. GitHub Pages serves it. There is no applicatio
 - Moving documentation: https://torresmanu.github.io/sideways-legal/moving/
 - Privacy Policy: https://torresmanu.github.io/sideways-legal/privacy/
 - Terms of Service: https://torresmanu.github.io/sideways-legal/terms/
+- Data Processing Agreement: https://torresmanu.github.io/sideways-legal/dpa/
