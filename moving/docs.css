@@ -1,0 +1,169 @@
+/* Documentation layout for Moving. Uses the shared site tokens in styles.css. */
+
+.wrap-docs {
+  max-width: 46rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.45rem;
+  color: var(--link);
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 0 0 0.65rem;
+  font-size: 1.2rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.15rem;
+  margin: 1.15rem 0 0.25rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.55rem 0.9rem;
+  border-radius: 0.5rem;
+  background: #1d4e89;
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #163a68;
+}
+
+.button:focus-visible,
+.quiet-link:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.quiet-link {
+  font-size: 0.9375rem;
+}
+
+.card-grid,
+.step-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card-grid article,
+.step-grid li,
+.example {
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--card);
+  padding: 0.95rem 1rem;
+}
+
+.card-grid h3,
+.step-grid h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.card-grid p,
+.step-grid p,
+.example p,
+.example-label {
+  margin: 0.35rem 0 0;
+}
+
+.example-label {
+  margin-top: 0;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.step-grid {
+  counter-reset: step;
+}
+
+.step-grid li {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.step-grid li::before {
+  content: counter(step);
+  counter-increment: step;
+  position: absolute;
+  top: 0.95rem;
+  left: 0.9rem;
+  color: var(--link);
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+
+/* The status word is the label. The border only reinforces it. */
+.signal-moving { border-left: 3px solid #1d4e89; }
+.signal-slowing { border-left: 3px solid #92400e; }
+.signal-waiting { border-left: 3px solid #9a3412; }
+
+.example { margin: 1rem 0; }
+.example-key { font-weight: 650; }
+.example-state { color: #9a3412; font-weight: 650; }
+
+.example ul,
+.steps-list {
+  margin: 0.55rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.example ul { color: var(--muted); }
+.steps-list li { margin: 0.4rem 0; }
+
+details {
+  border-top: 1px solid var(--line);
+  padding: 0.7rem 0;
+}
+
+details:last-child { border-bottom: 1px solid var(--line); }
+
+summary {
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.section-links a { margin-right: 1rem; }
+
+@media (min-width: 52rem) {
+  .card-grid,
+  .step-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .button { background: #93c5fd; color: #1c1917; }
+  .button:hover { background: #bfdbfe; }
+  .signal-moving { border-left-color: #93c5fd; }
+  .signal-slowing { border-left-color: #fdba74; }
+  .signal-waiting { border-left-color: #fda4af; }
+  .example-state { color: #fda4af; }
+}
+
+@media (max-width: 40rem) {
+  .subtitle { font-size: 1.1rem; }
+}

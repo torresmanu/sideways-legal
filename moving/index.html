@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Moving for Jira — Documentation | Sideways</title>
+  <meta name="description" content="Learn how Moving identifies Jira work that is Moving, Slowing, or Waiting based on your project's workflow history.">
+  <link rel="icon" href="../favicon.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+  <div class="wrap wrap-docs">
+    <header class="site-header">
+      <a class="brand" href="../">Sideways</a>
+      <nav class="nav" aria-label="Site">
+        <a href="./" aria-current="page">Moving</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Service</a>
+      </nav>
+    </header>
+
+    <main>
+      <p class="eyebrow">Moving for Jira</p>
+      <h1>Moving</h1>
+      <p class="subtitle">Know what’s actually moving</p>
+      <p>Moving helps you spot active Jira work that is taking longer than usual. It learns how work normally flows through your projects and surfaces the issues that may need attention.</p>
+      <p class="actions">
+        <!-- MARKETPLACE_URL_TODO: replace this href with the Atlassian Marketplace listing URL. -->
+        <a class="button" href="MARKETPLACE_URL_TODO">Get Moving on Atlassian Marketplace</a>
+        <a class="quiet-link" href="#how-it-works">How it works</a>
+      </p>
+
+      <h2 id="what-is-moving">What is Moving?</h2>
+      <p>Moving — Workflow Insights for Jira is a Jira Cloud app from Sideways. It shows whether active work is progressing normally or spending unusually long in its current workflow status.</p>
+      <p>It focuses only on work currently in Jira’s In Progress status category. Backlog, not-started, and completed work are excluded.</p>
+      <p>Moving is deliberately simple: no dashboards to configure, no custom thresholds, and no workflow setup.</p>
+
+      <h2 id="how-it-works">How it works</h2>
+      <ol class="step-grid">
+        <li>
+          <h3>Learn</h3>
+          <p>Moving looks at completed issues in each project and learns how long work typically spent in each active workflow status.</p>
+        </li>
+        <li>
+          <h3>Compare</h3>
+          <p>For current active issues, Moving compares how long each issue has been in its current status with that project’s historical workflow pattern.</p>
+        </li>
+        <li>
+          <h3>Focus</h3>
+          <p>Moving classifies active work as Moving, Slowing, or Waiting so teams can quickly see what deserves attention.</p>
+        </li>
+      </ol>
+      <p>When there is not enough reliable history for a project and status, Moving falls back to recent Jira activity.</p>
+
+      <h2 id="states">Moving, Slowing, and Waiting</h2>
+      <p>These are workflow signals that help people decide where to look.</p>
+      <div class="card-grid">
+        <article class="signal signal-moving">
+          <h3>Moving</h3>
+          <p>Work is progressing within the normal historical range for that project and workflow status.</p>
+        </article>
+        <article class="signal signal-slowing">
+          <h3>Slowing</h3>
+          <p>Work has been in its current status longer than most comparable completed work and may be worth a look.</p>
+        </article>
+        <article class="signal signal-waiting">
+          <h3>Waiting</h3>
+          <p>Work has been in its current status unusually long compared with historical work and is likely to need attention.</p>
+        </article>
+      </div>
+
+      <h2 id="activity">Activity is not the same as progress</h2>
+      <p>A Jira issue can receive a comment or edit without actually progressing through the workflow.</p>
+      <p>Moving keeps recent activity visible as context. When enough historical workflow data exists, the state is based on time in the current workflow status rather than simply Jira’s last-updated timestamp.</p>
+      <div class="example">
+        <p class="example-label">Example</p>
+        <p class="example-key">PROJ-128</p>
+        <p class="example-state">Waiting</p>
+        <ul>
+          <li>In Progress · 2 days</li>
+          <li>Typical: ~6 hours</li>
+          <li>Active just now</li>
+        </ul>
+      </div>
+      <p>A recent comment does not automatically turn that issue back into Moving.</p>
+
+      <h2 id="typical">How “Typical” is calculated</h2>
+      <p>When enough completed work is available, Moving learns a baseline separately for each project and workflow status.</p>
+      <p>“Typical” represents the median amount of time completed issues historically spent in that status.</p>
+      <p>Moving also uses the broader historical distribution to decide whether current work is Moving, Slowing, or Waiting.</p>
+      <details>
+        <summary>Technical details</summary>
+        <ul>
+          <li>Baselines are specific to a project and a workflow status.</li>
+          <li>Only completed historical issues contribute closed status intervals.</li>
+          <li>A baseline is reliable when it has at least 10 historical samples.</li>
+          <li>With a reliable baseline, time below the historical 75th percentile is Moving.</li>
+          <li>Time at or above the 75th percentile and below the 90th percentile is Slowing.</li>
+          <li>Time at or above the 90th percentile is Waiting.</li>
+          <li>Without a reliable baseline, Moving uses recent activity: under 24 hours is Moving, from 24 hours up to but not including 72 hours is Slowing, and 72 hours or more is Waiting.</li>
+        </ul>
+      </details>
+
+      <h2 id="getting-started">Getting started</h2>
+      <ol class="steps-list">
+        <li>Install Moving from the Atlassian Marketplace.</li>
+        <li>Approve the requested Jira read permission.</li>
+        <li>Open Jira and go to Apps → Moving.</li>
+        <li>Moving automatically analyzes active work and available workflow history.</li>
+        <li>Review Waiting and Slowing issues first.</li>
+      </ol>
+      <p>No workflow configuration or threshold setup is required.</p>
+
+      <h2 id="permissions">Permissions</h2>
+      <p>The current app requests <code>read:jira-work</code>.</p>
+      <p>Moving needs read access to Jira issue and workflow information in order to analyze active issues and historical status transitions.</p>
+      <ul>
+        <li>Moving does not request Jira write access.</li>
+        <li>Moving does not modify issues.</li>
+        <li>Moving does not transition issues.</li>
+        <li>Moving does not add comments.</li>
+      </ul>
+
+      <h2 id="privacy">Data and privacy</h2>
+      <p>Moving is built on Atlassian Forge. The current app does not use an external application backend, its own database, or Forge persistent storage for Jira issue content. Jira data is processed during app execution to calculate workflow insights.</p>
+      <p>Moving does not use Jira issue data for advertising, and it does not train AI models on that data. The current product does not send Jira issue data to third-party AI services.</p>
+      <p>Issue and assignee fields can contain personal information. Moving reads that information while it runs. The <a href="../privacy/">Privacy Policy</a> describes this in full.</p>
+      <p class="section-links">
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../terms/">Terms of Service</a>
+      </p>
+
+      <h2 id="troubleshooting">Troubleshooting</h2>
+      <details>
+        <summary>I don’t see any issues</summary>
+        <p>Moving only analyzes issues currently in Jira’s In Progress status category. Backlog, not-started, and completed issues are excluded.</p>
+      </details>
+      <details>
+        <summary>Everything shows Moving</summary>
+        <p>A project and status may not yet have enough historical samples for a reliable workflow baseline. In that case Moving uses recent activity until enough history is available.</p>
+      </details>
+      <details>
+        <summary>An issue is Waiting even though someone just commented on it</summary>
+        <p>Comments and edits count as recent activity, but they do not reset how long the issue has been in its current workflow status. With sufficient history, Moving uses workflow progression rather than recent activity to determine the state.</p>
+      </details>
+      <details>
+        <summary>“Typical” is not shown for an issue</summary>
+        <p>Moving only shows Typical when there is enough reliable historical data for that project and workflow status.</p>
+      </details>
+      <details>
+        <summary>Moving says it needs an active license</summary>
+        <p>The Marketplace subscription for the app is not currently active. The Jira administrator should check the app subscription in Atlassian administration or the Marketplace.</p>
+      </details>
+
+      <h2 id="support">Support</h2>
+      <p>Need help with Moving?</p>
+      <p>If something doesn’t look right, include:</p>
+      <ul>
+        <li>your Jira project key</li>
+        <li>the issue key if relevant</li>
+        <li>what you expected to see</li>
+        <li>what Moving displayed</li>
+      </ul>
+      <p>Email <a href="mailto:torres.schulten@gmail.com">torres.schulten@gmail.com</a>.</p>
+    </main>
+
+    <footer class="site-footer">
+      <p>Sideways · Moving — for Jira</p>
+      <p><a href="mailto:torres.schulten@gmail.com">torres.schulten@gmail.com</a></p>
+    </footer>
+  </div>
+</body>
+</html>
